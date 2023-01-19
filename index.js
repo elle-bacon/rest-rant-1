@@ -89,3 +89,10 @@ app.get('/', (req, res) => {
     </Def>
 )
 }
+
+app.use(express.urlencoded({ extended: true }))
+
+router.post('/', (req, res) => {
+  console.log(req.body)
+  res.send('POST /places')
+})
